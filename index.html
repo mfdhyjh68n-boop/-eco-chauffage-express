@@ -2,122 +2,592 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102a38">
+<meta name="description" content="ECO CHAUFFAGE EXPRESS : plomberie, chauffage, dépannage et rénovation de salles de bains en Île-de-France. 13 ans d'expérience. Urgences 24h/24.">
 <title>ECO CHAUFFAGE EXPRESS | Plomberie & Chauffage</title>
-<meta name="description" content="Plomberie, chauffage, dépannage et rénovation de salles de bains en Île-de-France. 13 ans d'expérience.">
+
 <style>
+:root{
+--navy:#102a38;
+--navy2:#193b4a;
+--gold:#c5a071;
+--cream:#f8f7f3;
+--text:#253a45;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#183343;background:#faf9f6}
-header{background:#fff;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #0001}
-.logo{font-weight:900;font-size:16px;line-height:1.2}
-.logo span{display:block;color:#bc9563;font-size:12px;letter-spacing:2px}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:var(--cream);
+line-height:1.65;
+}
 a{text-decoration:none;color:inherit}
-.phone,.btn{background:#c9a574;color:#142d3a;padding:12px 16px;border-radius:5px;font-weight:bold;display:inline-block}
-.phone{font-size:12px;white-space:nowrap}
-.hero{min-height:570px;background:linear-gradient(90deg,#102b3aee,#102b3a77),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200') center/cover;display:flex;align-items:center;color:white;padding:55px 7%}
-.hero h1{font-family:Georgia,serif;font-weight:normal;font-size:clamp(38px,7vw,65px);line-height:1.1;max-width:720px}
-.hero p{font-size:18px;max-width:570px}
-.tag{color:#e5bd84;letter-spacing:2px;text-transform:uppercase;font-size:12px}
-section{padding:65px 7%}
-h2{font:normal 38px Georgia,serif}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;box-shadow:0 4px 25px #0001}
-.card img{width:100%;height:230px;object-fit:cover}
-.card div{padding:20px}
-.card h3{margin:0}
-.card p{color:#64747d}
-.dark{background:#173442;color:white}
-.dark p{color:#e1e8eb}
-.reviews{background:#f0ede7}
-.review{background:white;padding:22px;border-left:4px solid #c9a574}
-.contact{background:#173442;color:white;text-align:center}
-footer{background:#0b222e;color:#ddd;text-align:center;padding:25px;font-size:13px}
-.float{position:fixed;bottom:20px;right:15px;background:#c9a574;padding:14px 18px;border-radius:30px;font-weight:bold;box-shadow:0 4px 15px #0004}
-@media(max-width:700px){
-.grid{grid-template-columns:1fr}
+img{display:block;width:100%;object-fit:cover}
+.container{max-width:1160px;margin:auto;padding:0 22px}
+.topbar{
+background:#0b202c;
+color:#fff;
+text-align:center;
+padding:9px 12px;
+font-size:12px;
+letter-spacing:.4px;
+}
+header{
+background:white;
+position:sticky;
+top:0;
+z-index:20;
+box-shadow:0 2px 15px #00000012;
+}
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+padding:15px 22px;
+max-width:1160px;
+margin:auto;
+}
+.logo{
+font-size:19px;
+font-weight:900;
+line-height:1.1;
+letter-spacing:1px;
+color:var(--navy);
+}
+.logo span{
+display:block;
+font-size:12px;
+letter-spacing:3px;
+color:var(--gold);
+margin-top:4px;
+}
+.navlinks{display:flex;gap:23px;font-size:14px}
+.btn{
+display:inline-block;
+padding:14px 23px;
+background:var(--gold);
+color:#102a38;
+border-radius:4px;
+font-weight:bold;
+border:0;
+cursor:pointer;
+font-size:14px;
+}
+.btn-dark{background:var(--navy);color:white}
+.btn-outline{
+background:transparent;
+border:1px solid white;
+color:white;
+}
+.hero{
+min-height:630px;
+display:flex;
+align-items:center;
+color:white;
+background:
+linear-gradient(90deg,#0b2433f5,#0b2433c0 55%,#0b243355),
+url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=85")
+center/cover;
+}
+.hero-content{padding:75px 0}
+.label{
+text-transform:uppercase;
+letter-spacing:3px;
+font-size:12px;
+font-weight:bold;
+color:var(--gold);
+}
+h1,h2{
+font-family:Georgia,serif;
+font-weight:normal;
+line-height:1.16;
+}
+h1{
+font-size:clamp(42px,7vw,76px);
+max-width:800px;
+margin:20px 0;
+}
+h2{
+font-size:clamp(32px,5vw,48px);
+margin:12px 0 20px;
+}
+.hero p{max-width:590px;font-size:18px;color:#f1f1f1}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+margin-top:45px;
+font-size:14px;
+}
+.trust strong{color:#edc58c}
+section{padding:80px 0}
+.lead{max-width:710px;color:#697b83}
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:35px;
+}
+.card{
+background:white;
+box-shadow:0 8px 28px #0000000b;
+overflow:hidden;
+}
+.card img{height:245px}
+.card-body{padding:25px}
+.card h3{font-size:22px;margin:0 0 10px;color:var(--navy)}
+.card p{margin:0;color:#647680}
+.dark{background:var(--navy);color:white}
+.dark p{color:#d4dfe2}
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+.split img{height:460px}
+.big-number{
+font:normal 78px Georgia,serif;
+color:var(--gold);
+line-height:1;
+}
+.badges{display:flex;gap:20px;flex-wrap:wrap;margin:25px 0}
+.badge{border-left:2px solid var(--gold);padding-left:14px}
+.review-section{background:#f0eee9}
+.review-row{
+display:flex;
+gap:18px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+padding:15px 2px 25px;
+}
+.review-card{
+flex:0 0 310px;
+scroll-snap-align:start;
+background:white;
+padding:25px;
+border-top:3px solid var(--gold);
+box-shadow:0 5px 18px #00000008;
+}
+.stars{color:#b58a53;letter-spacing:2px}
+.review-card p{min-height:105px}
+.review-card small{color:#697b83}
+.demo{background:#f7f4ec}
+.demo-label{
+font-size:11px;
+color:#856d4e;
+font-weight:bold;
+letter-spacing:.3px;
+}
+.hidden-reviews{display:none}
+.hidden-reviews.open{display:flex}
+.review-actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:25px;
+}
+.links{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:25px;
+}
+.links a{
+border:1px solid #c8c4bd;
+padding:12px 18px;
+border-radius:4px;
+background:white;
+font-weight:bold;
+font-size:14px;
+}
+.contact{background:#e8eeed}
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+.contact-box{
+background:white;
+padding:32px;
+box-shadow:0 10px 30px #00000010;
+}
+.contact-box a{color:#173f53}
+.contact-box .btn{color:white}
+footer{
+background:#0b202c;
+color:#d4dce0;
+padding:35px 0;
+font-size:13px;
+}
+footer small{color:#aebcc2}
+.floating{
+position:fixed;
+right:18px;
+bottom:20px;
+z-index:30;
+background:var(--gold);
+color:var(--navy);
+padding:14px 20px;
+border-radius:40px;
+font-weight:bold;
+box-shadow:0 6px 25px #0004;
+}
+@media(max-width:800px){
+.navlinks{display:none}
+.logo{font-size:14px}
+.logo span{font-size:10px}
+.nav .btn{padding:10px;font-size:12px}
 .hero{min-height:600px}
-.hero h1{font-size:43px}
-h2{font-size:32px}
-.logo{font-size:13px}
-.phone{font-size:11px;padding:10px}
+.hero-content{padding:65px 0}
+.services,.split,.contact-grid{grid-template-columns:1fr}
+section{padding:60px 0}
+.split img{height:320px}
+.review-card{flex-basis:85%}
+.contact-box{padding:24px}
 }
 </style>
 </head>
+
 <body>
 
+<div class="topbar">
+URGENCES 24H/24 · 7J/7 · TOUTE L’ÎLE-DE-FRANCE
+</div>
+
 <header>
-<a href="#" class="logo">ECO CHAUFFAGE<span>EXPRESS</span></a>
-<a class="phone" href="tel:+33753615025">☎ 07 53 61 50 25</a>
+<div class="nav">
+<a href="#" class="logo">
+ECO CHAUFFAGE
+<span>EXPRESS</span>
+</a>
+<nav class="navlinks">
+<a href="#services">Prestations</a>
+<a href="#expertise">Expertise</a>
+<a href="#avis">Avis clients</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="btn btn-dark" href="tel:+33753615025">
+☎ 07 53 61 50 25
+</a>
+</div>
 </header>
 
+<main>
+
 <div class="hero">
-<div>
-<div class="tag">Plomberie • Chauffage • Rénovation</div>
+<div class="container hero-content">
+<div class="label">Votre artisan en Île-de-France</div>
 <h1>Le confort de votre maison, notre exigence.</h1>
-<p>Des solutions élégantes et durables pour votre plomberie, votre chauffage et votre salle de bains. Intervention dans toute l’Île-de-France.</p>
-<p>✦ 13 ans d’expérience &nbsp; ✦ Urgences 24h/24</p>
-<a class="btn" href="tel:+33753615025">Demander une intervention →</a>
+<p>
+Plomberie, chauffage et rénovation de salle de bains.
+Des interventions soignées, des solutions durables
+et un accompagnement personnalisé.
+</p>
+<div class="actions">
+<a class="btn" href="#contact">Demander un devis →</a>
+<a class="btn btn-outline" href="tel:+33753615025">
+Appeler en urgence
+</a>
+</div>
+<div class="trust">
+<span><strong>13 ans</strong> d’expérience</span>
+<span><strong>24h/24</strong> urgences</span>
+<span><strong>Île-de-France</strong> entière</span>
+</div>
 </div>
 </div>
 
 <section id="services">
-<div class="tag">Notre savoir-faire</div>
-<h2>Nos prestations</h2>
-<div class="grid">
+<div class="container">
+<div class="label">Nos prestations</div>
+<h2>Un savoir-faire au service de votre intérieur</h2>
+<p class="lead">
+De la réparation urgente à la rénovation complète,
+nous apportons le même soin à chaque intervention.
+</p>
+
+<div class="services">
 
 <article class="card">
-<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800" alt="Salle de bains moderne">
-<div><h3>Plomberie & dépannage</h3><p>Recherche de fuites, réparations, installations et urgences.</p></div>
+<img
+src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=85"
+alt="Salle de bains moderne avec baignoire">
+<div class="card-body">
+<h3>Plomberie & dépannage</h3>
+<p>
+Fuites d’eau, canalisations, robinetterie,
+sanitaires et interventions d’urgence.
+</p>
+</div>
 </article>
 
 <article class="card">
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800" alt="Intérieur moderne">
-<div><h3>Chauffage</h3><p>Chaudières, radiateurs, chauffe-eau, installation et entretien.</p></div>
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900&q=85"
+alt="Intérieur contemporain">
+<div class="card-body">
+<h3>Chauffage & chauffe-eau</h3>
+<p>
+Installation, remplacement, entretien
+et dépannage de vos équipements.
+</p>
+</div>
 </article>
 
 <article class="card">
-<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800" alt="Rénovation intérieure">
-<div><h3>Rénovation de salle de bains</h3><p>Des espaces confortables et raffinés, adaptés à votre maison.</p></div>
+<img
+src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=900&q=85"
+alt="Rénovation de salle de bains contemporaine">
+<div class="card-body">
+<h3>Rénovation de salle de bains</h3>
+<p>
+Baignoire, douche, lavabo, sanitaires
+et finitions élégantes.
+</p>
+</div>
 </article>
+
+</div>
+</div>
+</section>
+
+<section class="dark" id="expertise">
+<div class="container split">
+<div>
+<div class="label">Notre engagement</div>
+<h2>La qualité se voit dans les détails.</h2>
+<div class="big-number">13</div>
+<p>années d’expérience dans la plomberie et le chauffage.</p>
+<p>
+Basés à Alfortville (94140), nous intervenons
+à Paris et dans toute l’Île-de-France.
+</p>
+<div class="badges">
+<div class="badge">Interventions soignées</div>
+<div class="badge">Conseils personnalisés</div>
+<div class="badge">Dépannage 24h/24</div>
+</div>
+<a class="btn" href="#contact">Parler de votre projet →</a>
+</div>
+<img
+src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1000&q=85"
+alt="Aménagement intérieur contemporain">
+</div>
+</section>
+
+<section id="avis" class="review-section">
+<div class="container">
+
+<div class="label">Avis clients</div>
+<h2>La confiance de nos clients</h2>
+<p class="lead">
+Découvrez les retours de nos clients
+et consultez nos profils professionnels.
+</p>
+
+<div class="review-row">
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>« Artisan très professionnel et de très bon conseil. Il a réalisé un travail de grande qualité, malgré des difficultés imprévues. »</p>
+<strong>Client à Alfortville</strong><br>
+<small>Travaux.com · 07/07/2026</small>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>« Très bon travail je suis satisfait »</p>
+<strong>Client AlloVoisins</strong><br>
+<small>AlloVoisins · 16/09/2025</small>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>« Très bon travaille ,de très bon thechnicien rien à dire »</p>
+<strong>Yolan H.</strong><br>
+<small>AlloVoisins · 16/09/2025</small>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>« Très bon qualité de travail »</p>
+<strong>Biyagui K.</strong><br>
+<small>AlloVoisins · 16/09/2025</small>
+</div>
+
+</div>
+
+<div id="moreReviews" class="review-row hidden-reviews">
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Intervention rapide pour une fuite d’eau. Travail soigné et explications claires. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Très belle rénovation de salle de bains. Les finitions sont élégantes. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Remplacement du chauffe-eau réalisé avec sérieux et propreté. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Le problème de chauffage a été identifié rapidement. Intervention efficace. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Installation du lavabo et de la robinetterie réalisée avec précision. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Recherche de fuite effectuée avec méthode. Réparation bien réalisée. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Travail professionnel et organisé. Chantier propre et soigné. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+<div class="review-card demo">
+<div class="demo-label">EXEMPLE DE TÉMOIGNAGE</div>
+<p>« Belle transformation de la salle de bains, moderne et fonctionnelle. »</p>
+<small>Texte de démonstration</small>
+</div>
+
+</div>
+
+<div class="review-actions">
+<button
+class="btn btn-dark"
+id="showMore"
+onclick="toggleReviews()">
+Voir plus d’avis ↓
+</button>
+</div>
+
+<div class="links">
+<a
+href="https://www.travaux.com/professionnel/ecochauffage-express"
+target="_blank"
+rel="noopener">
+Voir nos avis sur Travaux.com ↗
+</a>
+
+<a
+href="https://www.allovoisins.com/"
+target="_blank"
+rel="noopener">
+Voir AlloVoisins ↗
+</a>
+
+<a
+href="https://www.travaux.com/professionnel/ecochauffage-express"
+target="_blank"
+rel="noopener">
+Laisser un avis ↗
+</a>
+</div>
 
 </div>
 </section>
 
-<section class="dark">
-<div class="tag">ECO CHAUFFAGE EXPRESS</div>
-<h2>13 ans d’expérience à votre service</h2>
-<p>Basés à Alfortville (94140), nous intervenons dans toute l’Île-de-France : Paris, Seine-et-Marne, Yvelines, Essonne, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne et Val-d’Oise.</p>
-<p>Nous privilégions la qualité du travail, la réactivité et les conseils personnalisés.</p>
-</section>
+<section class="contact" id="contact">
+<div class="container contact-grid">
 
-<section class="reviews">
-<div class="tag">Avis clients</div>
-<h2>Ils nous font confiance</h2>
-<div class="grid">
-<div class="review">★★★★★<p>« Très bon travail je suis satisfait »</p><small>AlloVoisins — 16/09/2025</small></div>
-<div class="review">★★★★★<p>« Très bon travaille ,de très bon thechnicien rien à dire »</p><small>Yolan H. — AlloVoisins</small></div>
-<div class="review">★★★★★<p>« Très bon qualité de travail »</p><small>Biyagui K. — AlloVoisins</small></div>
+<div>
+<div class="label">Contact & devis</div>
+<h2>Parlons de votre projet.</h2>
+<p>
+Une urgence, une installation ou un projet
+de rénovation ? Contactez ECO CHAUFFAGE EXPRESS.
+</p>
+<p>
+<strong>Zone d’intervention :</strong><br>
+Paris (75), Seine-et-Marne (77),
+Yvelines (78), Essonne (91),
+Hauts-de-Seine (92),
+Seine-Saint-Denis (93),
+Val-de-Marne (94),
+Val-d’Oise (95).
+</p>
+</div>
+
+<div class="contact-box">
+<h3>ECO CHAUFFAGE EXPRESS</h3>
+<p><strong>📍 Alfortville (94140)</strong></p>
+<p>
+<strong>Téléphone :</strong><br>
+<a href="tel:+33753615025">07 53 61 50 25</a>
+</p>
+<p>
+<strong>Email :</strong><br>
+<a href="mailto:plombexpressparis@gmail.com">
+plombexpressparis@gmail.com
+</a>
+</p>
+<p><strong>Urgences : 24h/24 · 7j/7</strong></p>
+<a
+class="btn btn-dark"
+href="mailto:plombexpressparis@gmail.com?subject=Demande%20de%20devis%20-%20ECO%20CHAUFFAGE%20EXPRESS">
+Demander un devis →
+</a>
+</div>
+
 </div>
 </section>
 
-<section class="contact">
-<div class="tag">Contact & devis</div>
-<h2>Parlons de votre projet</h2>
-<p>Une urgence ? Un projet de rénovation ? Contactez-nous.</p>
-<p><strong>07 53 61 50 25</strong></p>
-<p>plombexpressparis@gmail.com</p>
-<a class="btn" href="mailto:plombexpressparis@gmail.com?subject=Demande%20de%20devis">Demander un devis gratuit →</a>
-</section>
+</main>
 
 <footer>
-ECO CHAUFFAGE EXPRESS<br>
-Alfortville 94140 • Île-de-France<br>
+<div class="container">
+<strong>ECO CHAUFFAGE EXPRESS</strong><br>
+Plomberie · Chauffage · Rénovation<br>
+Alfortville 94140 · Île-de-France<br>
 SIRET : 991 755 364 00015<br>
-© 2026 ECO CHAUFFAGE EXPRESS<br>
-<small>Photographies d’illustration.</small>
+Téléphone : 07 53 61 50 25<br><br>
+<small>
+© 2026 ECO CHAUFFAGE EXPRESS.
+Photographies d’illustration.
+</small>
+</div>
 </footer>
 
-<a class="float" href="tel:+33753615025">☎ Appeler</a>
+<a class="floating" href="tel:+33753615025">
+☎ Appeler
+</a>
+
+<script>
+function toggleReviews(){
+const area=document.getElementById("moreReviews");
+const button=document.getElementById("showMore");
+const opened=area.classList.toggle("open");
+button.textContent=opened
+?"Voir moins d’avis ↑"
+:"Voir plus d’avis ↓";
+}
+</script>
 
 </body>
 </html>
